@@ -21,6 +21,6 @@ jobs:
       - name: List files
         run: ls
       - name: List secret
-        run: ${{ secrets.TEST_SECRET }}
+        run: echo ${{ secrets.TEST_SECRET }}
       - name: Output infomration
         run: echo "Deploying & uploading..."
