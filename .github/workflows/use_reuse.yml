@@ -65,6 +65,7 @@ jobs:
           path: dist
   deploy:
     needs: build
+    # reusable
     uses: ./.github/workflows/reusable.yml
 
   report:
