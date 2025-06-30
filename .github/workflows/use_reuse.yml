@@ -63,6 +63,8 @@ jobs:
         with:
           name: dist-files
           path: dist
+        secrets:
+          TEST_SECRET: 1234
   deploy:
     needs: build
     # reusable
