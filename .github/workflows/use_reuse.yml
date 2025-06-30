@@ -63,14 +63,14 @@ jobs:
         with:
           name: dist-files
           path: dist
-        secrets:
-          TEST_SECRET: 1234
   deploy:
     needs: build
     # reusable
     uses: ./.github/workflows/reusable.yml
     with:
       artifact-name: dist-files
+    secrets:
+      TEST_SECRET: 1234
 
   report:
     needs: [lint, deploy]
